@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Road and GeoServer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/addFarm.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Thêm Font Awesome để dùng icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="blue-bar">
+        <i class="fa-solid fa-bars" class="bars"></i>
+        <span id="software-management">QUAN LY PHAN MEM</span>
+
+        <div id="username-display">
+            <!-- Tên tài khoản sẽ hiển thị ở đây -->
+        </div>
+
+        <span id="username"></span>
+        <i class="fa-solid fa-right-from-bracket" id="logout-icon" title="Đăng xuất"></i>
+    </div>
+
+    <ul class="dropdown-menu">
+        <li><a href="#">QUẢN LÝ TRẠI NUÔI</a>
+            <i class="icon-menu fas fa-chevron-down"></i>
+            <ul class="sub-menu">
+                <li><a href="addFarm.html">Thêm Trại Nuôi</a></li>
+                <li><a href="adjust_delete_farm.html">Sửa/Xóa Trại Nuôi</a></li>
+                <li><a href="#">Danh mục 1.3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">QUẢN LÝ AO NUÔI</a>
+            <i class="icon-menu fas fa-chevron-down"></i>
+            <ul class="sub-menu">
+                <li><a href="addPond.html">Thêm Ao Nuôi</a></li>
+                <li><a href="#">Danh mục 2.2</a></li>
+                <li><a href="#">Danh mục 2.3</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Danh mục 5</a>
+            <i class="icon-menu fas fa-chevron-down"></i>
+            <ul class="sub-menu">
+                <li><a href="#">Danh mục 5.1</a></li>
+                <li><a href="#">Danh mục 5.2</a></li>
+                <li><a href="#">Danh mục 5.3</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="form-container">
+        <h2>Thêm Trại Nuôi</h2>
+        <form id="add-farm-form">
+            <label for="nameFarm">Tên Trại:</label>
+            <input type="text" id="nameFarm" name="nameFarm" required>
+            
+            <label for="address">Địa Chỉ:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="text" id="phone" name="phone" required>
+            
+            <label for="farming">Loại Hình Nuôi Trồng:</label>
+            <input type="text" id="farming" name="farming" required>
+            
+            <label for="obj">Loại Giống:</label>
+            <input type="text" id="obj" name="obj" required>
+            
+            <label for="manager">Tên Người Quản Lý:</label>
+            <input type="text" id="manager" name="manager" required>
+            
+            <button type="submit">Thêm Trại Nuôi</button>
+        </form>
+    </div>
+
+    <div id="map" style="display: none;"></div>
+    <button id="calculateDistance" style="display: none">Tính Khoảng Cách</button>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/addFarm.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

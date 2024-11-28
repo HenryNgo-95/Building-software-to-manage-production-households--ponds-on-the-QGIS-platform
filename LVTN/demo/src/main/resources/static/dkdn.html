@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dkdn.css">
+    <title>Trang Đăng Nhập và Đăng Ký</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form id="login-form" style="display:block;" onsubmit="loginUser(event)">
+                <h2>Đăng Nhập</h2>
+                <input type="text" name="username1" placeholder="Tên Tài Khoản" required>
+                <input type="password" name="password1" placeholder="Mật khẩu" required>
+                <button type="submit">Đăng Nhập</button>
+                <p class="switch-form">Bạn chưa có tài khoản? <a href="#" id="show-register">Đăng Ký</a></p>
+            </form>
+
+            <form id="register-form" style="display: none;" onsubmit="registerUser(event)">
+                <h2>Đăng Ký</h2>
+                <input type="text" name="fullname" placeholder="Họ và tên" required>
+                <input type="text" name="username" placeholder="Tên tài khoản" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Mật khẩu" required>
+                <input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu" required>
+                <label for="gender">Giới tính:</label>
+                <select name="gender" required>
+                    <option value="">Chọn giới tính</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+                <input type="text" name="address" placeholder="Địa chỉ" required>
+                <input type="date" name="dateOfBirth" placeholder="Ngày sinh" required>
+                <button type="submit">Đăng Ký</button>
+                <p class="switch-form">Đã có tài khoản? <a href="#" id="show-login">Đăng Nhập</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dkdn.js"></script>
+</body>
+
+</html>

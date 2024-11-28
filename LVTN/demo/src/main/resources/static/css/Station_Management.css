@@ -1,0 +1,92 @@
+/* Reset CSS */
+body, h1, h2, p, div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Định dạng chung */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  /* Danh sách trạm */
+  .station-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .station-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+  }
+  
+  .station-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .station-card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .station-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .station-card p {
+    margin: 5px 0;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #f1f1f1;
+  }
+
+  /* Multi data streams */
+  
+
+  #data-streams {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  #data-streams-list li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #data-streams-list li:last-child {
+    border-bottom: none;
+  }
+  

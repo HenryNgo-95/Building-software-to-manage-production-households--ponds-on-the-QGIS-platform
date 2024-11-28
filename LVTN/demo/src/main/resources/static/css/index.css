@@ -1,0 +1,166 @@
+/* styles.css */
+
+/* Cài đặt chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+}
+
+/* Kiểu dáng cho bản đồ */
+#map {
+    width: 70%;
+    height: 70vh;
+    border: 2px solid #007bff; /* Viền màu xanh */
+    border-radius: 8px; /* Bo tròn góc */
+    margin-top: 10%; /* Thêm khoảng trống phía trên bản đồ */
+}
+
+/* Nút tính khoảng cách */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+    border: none;
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Hiển thị con trỏ bàn tay khi di chuột */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+/* Hiệu ứng hover cho nút */
+button:hover {
+    background-color: #0056b3; /* Màu nền xanh đậm khi hover */
+}
+
+/* Kiểu dáng cho phần hiển thị khoảng cách */
+#distance {
+    margin-top: 20px;
+    font-size: 18px; /* Kích thước chữ */
+    color: #333; /* Màu chữ tối */
+}
+
+/* Thanh màu xanh ở đầu trang */
+#blue-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #0056b3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+/* Hiển thị tên tài khoản và icon đăng xuất */
+#username-display {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    color: white;
+    font-size: 18px;
+}
+
+#username {
+    margin-right: 20px;
+}
+
+/* Kiểu dáng cho icon đăng xuất */
+#logout-icon {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#logout-icon:hover {
+    color: #ff0000; /* Màu đỏ khi hover vào icon */
+}
+
+/* Kiểu dáng cho icon menu */
+#blue-bar i.fa-bars{
+    color: white;
+    font-size: 24px;
+    margin-right: 10px; 
+    margin-left: 20px;
+    cursor: pointer; 
+}
+
+/* Kiểu dáng cho văn bản "Quản lý phần mềm" */
+#software-management {
+    color: white; 
+    font-size: 18px; 
+    margin-right: auto; 
+}
+
+
+a{
+    text-decoration: none;
+}
+.dropdown-menu{
+    padding: 0;
+    list-style-type: none;
+    margin-top: 50px;
+    position: fixed; /* Đặt vị trí cố định */
+    top: 0;
+    left: -500px; /* Ẩn thanh menu bên trái */
+    width: 300px; /* Chiều rộng của thanh menu */
+    height: 100%; /* Chiều cao 100% */
+    background-color: #D3D3D3; /* Màu nền của thanh menu */
+    transition: left 0.3s ease; /* Hiệu ứng chuyển động khi hiển thị */
+    z-index: 999; /* Đảm bảo nó nằm trên cùng */
+}
+
+/* Khi thanh menu được mở */
+.dropdown-menu.open {
+    left: 0; /* Hiển thị thanh menu */
+}
+
+.dropdown-menu .sub-menu{
+    list-style-type: none;
+    background: #D3D3D3;
+    display: none;
+}
+.dropdown-menu > li {
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+.dropdown-menu a{
+    font-weight: 700;
+    display: block;
+    padding: 10px 10px;
+    color: #000;
+}
+.dropdown-menu .sub-menu a:hover{
+    color: #FFA500;
+}
+.dropdown-menu .sub-menu a{
+    padding-left: 28px;
+    color: #000;
+}
+.icon-menu{
+    color: #000;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 14px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #000; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+}
+
+.dropdown-menu > li.selected > a {
+    color: white; /* Màu chữ trắng cho thẻ a khi <li> được chọn */
+}
+
+.dropdown-menu > li.selected .icon-menu {
+    color: white; /* Đổi màu icon thành trắng khi mục được chọn */
+}

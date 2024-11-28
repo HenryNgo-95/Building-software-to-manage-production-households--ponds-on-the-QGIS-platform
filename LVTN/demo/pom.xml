@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.3.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.example</groupId>
+	<artifactId>demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo</name>
+	<description>Demo project for Spring Boot</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>19</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Phụ thuộc JPA -->
+		<dependency>
+    		<groupId>jakarta.persistence</groupId>
+    		<artifactId>jakarta.persistence-api</artifactId>
+    		<version>3.1.0</version>
+		</dependency>
+
+		<!-- Phụ thuộc mã hóa BCrypt -->
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+
+		<!-- Spring Data JPA -->
+    	<dependency>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-data-jpa</artifactId>
+    	</dependency>
+
+		<dependency>
+   			<groupId>org.postgresql</groupId>
+    		<artifactId>postgresql</artifactId>
+    		<version>42.2.5</version> <!-- Có thể thay đổi phiên bản nếu cần -->
+		</dependency>
+
+		<!-- Token -->
+		<dependency>
+    		<groupId>javax.servlet</groupId>
+    		<artifactId>javax.servlet-api</artifactId>
+    		<version>4.0.1</version> <!-- Có thể thay đổi phiên bản nếu cần -->
+    		<scope>provided</scope>
+		</dependency>
+		
+		<!-- Thư viện JTS chuyển đổi thành kiểu geometry -->
+		<dependency>
+    		<groupId>org.locationtech.jts</groupId>
+    		<artifactId>jts-core</artifactId>
+    		<version>1.18.2</version>
+		</dependency>
+		<!-- Sử Dụng PGgeometry từ Thư Viện postgis-jdbc giúp tuần tự hóa Geometry -->
+		<dependency>
+    		<groupId>net.postgis</groupId>
+    		<artifactId>postgis-jdbc</artifactId>
+    		<version>2.5.0</version>
+		</dependency>
+
+		<dependency>
+    		<groupId>jakarta.transaction</groupId>
+    		<artifactId>jakarta.transaction-api</artifactId>
+    		<version>2.0.1</version>
+		</dependency>
+
+		<!-- ///////////////////////////////////////////////////// -->
+		<dependency>
+    		<groupId>org.hibernate.orm</groupId>
+    		<artifactId>hibernate-spatial</artifactId>
+    		<version>6.5.3.Final</version>
+		</dependency>
+
+		<dependency>
+    		<groupId>org.locationtech.jts</groupId>
+    		<artifactId>jts-core</artifactId>
+    		<version>1.18.2</version>
+		</dependency>
+
+		<dependency>
+    		<groupId>com.fasterxml.jackson.core</groupId>
+    		<artifactId>jackson-databind</artifactId>
+    		<version>2.15.2</version> <!-- hoặc phiên bản phù hợp với dự án của bạn -->
+		</dependency>
+
+	</dependencies>
+
+	<repositories>
+    	<repository>
+        	<id>locationtech</id>
+        	<url>https://repo.locationtech.org/content/repositories/jts</url>
+    	</repository>
+    	<repository>
+        	<id>central</id>
+        	<url>https://repo.maven.apache.org/maven2</url>
+    	</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+        	<plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+            	<artifactId>maven-compiler-plugin</artifactId>
+            	<version>3.10.1</version> <!-- Hoặc phiên bản mới hơn -->
+            	<configuration>
+                	<source>${java.version}</source>
+                	<target>${java.version}</target>
+            	</configuration>
+        	</plugin>
+    	</plugins>
+	</build>
+</project>

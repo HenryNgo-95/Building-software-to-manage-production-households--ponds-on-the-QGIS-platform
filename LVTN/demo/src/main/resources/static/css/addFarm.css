@@ -1,0 +1,295 @@
+/* styles.css */
+
+/* Cài đặt chung cho body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+}
+
+
+/* Thanh màu xanh ở đầu trang */
+#blue-bar {
+    width: 100%;
+    height: 50px;
+    background-color: #0056b3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+/* Hiển thị tên tài khoản và icon đăng xuất */
+#username-display {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    color: white;
+    font-size: 18px;
+}
+
+#username {
+    margin-right: 20px;
+}
+
+/* Kiểu dáng cho icon đăng xuất */
+#logout-icon {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#logout-icon:hover {
+    color: #ff0000; /* Màu đỏ khi hover vào icon */
+}
+
+/* Kiểu dáng cho icon menu */
+#blue-bar i.fa-bars{
+    color: white;
+    font-size: 24px;
+    margin-right: 10px; 
+    margin-left: 20px;
+    cursor: pointer; 
+}
+
+/* Kiểu dáng cho văn bản "Quản lý phần mềm" */
+#software-management {
+    color: white; 
+    font-size: 18px; 
+    margin-right: auto; 
+}
+
+
+a{
+    text-decoration: none;
+}
+.dropdown-menu{
+    padding: 0;
+    list-style-type: none;
+    margin-top: 50px;
+    position: fixed; /* Đặt vị trí cố định */
+    top: 0;
+    left: -500px; /* Ẩn thanh menu bên trái */
+    width: 300px; /* Chiều rộng của thanh menu */
+    height: 100%; /* Chiều cao 100% */
+    background-color: #D3D3D3; /* Màu nền của thanh menu */
+    transition: left 0.3s ease; /* Hiệu ứng chuyển động khi hiển thị */
+    z-index: 999; /* Đảm bảo nó nằm trên cùng */
+}
+
+/* Khi thanh menu được mở */
+.dropdown-menu.open {
+    left: 0; /* Hiển thị thanh menu */
+}
+
+.dropdown-menu .sub-menu{
+    list-style-type: none;
+    background: #D3D3D3;
+    display: none;
+}
+.dropdown-menu > li {
+    position: relative;
+    border-bottom: 1px solid #000;
+}
+.dropdown-menu a{
+    font-weight: 700;
+    display: block;
+    padding: 10px 10px;
+    color: #000;
+}
+.dropdown-menu .sub-menu a:hover{
+    color: #FFA500;
+}
+.dropdown-menu .sub-menu a{
+    padding-left: 28px;
+    color: #000;
+}
+.icon-menu{
+    color: #000;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 14px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #000; /* Màu nền xanh */
+    color: white; /* Màu chữ trắng */
+}
+
+.dropdown-menu > li.selected > a {
+    color: white; /* Màu chữ trắng cho thẻ a khi <li> được chọn */
+}
+
+.dropdown-menu > li.selected .icon-menu {
+    color: white; /* Đổi màu icon thành trắng khi mục được chọn */
+}
+
+/* Form Thêm Trại Nuôi */
+/*
+.form-container {
+    max-width: 800px; 
+    margin: 100px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+*/
+
+/* 00000000000000000000000000000000000000000000000000000000 */
+.form-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng cho nút cập nhật */
+.update-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    grid-column: span 2;
+    margin-top: 20px;
+}
+
+.update-button:hover {
+    background-color: #218838;
+}
+
+/* Định dạng cho nút xóa */
+.delete-button {
+    background-color: #dc3545 !important;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    grid-column: span 2;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Khoảng cách giữa các trường input */
+#add-farm-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 000000000000000000000000000000000000000000000000000000000000000000 */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Layout lưới cho form */
+#add-farm-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 cột ngang */
+    grid-gap: 20px; /* Khoảng cách giữa các hàng và cột */
+    align-items: center;
+}
+
+.form-group {
+    display: contents; /* Sử dụng toàn bộ không gian theo lưới */
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    grid-column: span 1; /* Nhãn chỉ chiếm 1 cột */
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    grid-column: span 1; /* Input cũng chiếm 1 cột */
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Nút submit full-width */
+button[type="submit"] {
+    grid-column: span 2; /* Nút lưu sẽ chiếm hết 2 cột */
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+th {
+    color: #fff;
+    background-color: #000;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
