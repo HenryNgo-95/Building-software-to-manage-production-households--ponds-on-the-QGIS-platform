@@ -102,12 +102,6 @@
 		</dependency>
 
 		<dependency>
-    		<groupId>org.locationtech.jts</groupId>
-    		<artifactId>jts-core</artifactId>
-    		<version>1.18.2</version>
-		</dependency>
-
-		<dependency>
     		<groupId>com.fasterxml.jackson.core</groupId>
     		<artifactId>jackson-databind</artifactId>
     		<version>2.15.2</version> <!-- hoặc phiên bản phù hợp với dự án của bạn -->
